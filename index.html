@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام إدارة نتائج الطلاب</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="wrap flex">
+      <div class="logo">🎓</div>
+      <div class="header-text">
+        <h1>نظام إدارة وتحليل نتائج الطلاب</h1>
+        <p>Task 2 • Console-Based • كلية الحاسبات والمعلومات</p>
+      </div>
+      <span class="year-badge">العام الجامعي 2026</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <div class="stat"><p>إجمالي الطلاب</p><h3 id="totalCount">0</h3><p class="sub gold">● مسجلين</p></div>
+      <div class="stat green-top"><p>الناجحون</p><h3 class="green" id="passCount">0</h3><p class="sub green">● اجتازوا</p></div>
+      <div class="stat red-top"><p>يحتاج مراجعة</p><h3 class="red" id="failCount">0</h3><p class="sub red">● لم يجتازوا</p></div>
+      <div class="stat gold-top"><p>لجنة الرأفة</p><h3 class="gold-text" id="mercyCount">0</h3><p class="sub gold-text">● قيد المراجعة</p></div>
+    </div>
+
+    <section class="card">
+      <div class="card-head">
+        <b>تقرير الطلاب</b>
+        <span class="count-badge">4 طلاب</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>رقم الجلوس</th><th>الاسم</th><th>المتوسط</th><th>التقدير</th><th>الحضور</th><th>النتيجة</th></tr>
+          </thead>
+          <tbody id="studentsTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <b>لجنة الرأفة</b>
+        <span class="mercy-badge">+ 5 درجات</span>
+      </div>
+      <p class="mercy-note">الطلاب الذين يتراوح متوسطهم بين 40 و 49</p>
+      <div id="mercyList"></div>
+      <div class="footer-box">
+        <b>متوسط درجات المتعثرين بعد التعديل</b>
+        <span id="mercyAvg">0</span>
+      </div>
+    </section>
+
+    <p class="hint">للعرض الكامل افتح وحدة التحكم <b>F12</b> • Console</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
